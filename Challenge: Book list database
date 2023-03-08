@@ -1,0 +1,12 @@
+/** Book List:
+Games of Thrones (5)
+Rich Dad, Poor Dad(1)
+Wolf of Wallstreet (2)
+**/
+
+CREATE TABLE Book(id integer,name text,rating integer);
+
+INSERT INTO Book VALUES (1, "Games of Thrones", 5);
+INSERT INTO Book Values(2,"Rich Dad, Poor Dad", 1);
+INSERT INTO Book VALUES (3,"Wolf of Wallstreet", 2);
+SELECT * FROM Book;
