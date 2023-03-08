@@ -1,0 +1,36 @@
+CREATE TABLE clothing (id integer primary key,name text, price integer, quanity integer,aisle integer);
+
+
+INSERT INTO clothing Values(1,"Cardigan",19.99,50,1);
+
+INSERT INTO clothing Values(2,"Tank Top",12.99,20,2);
+
+INSERT INTO clothing Values(3,"Jeans",49.99, 10,3);
+
+INSERT INTO clothing Values(4,"Kaki",49.99,5,4);
+
+INSERT INTO clothing Values(5,"Sweather",29.99,9,5);
+
+INSERT INTO clothing Values(6,"Short",19.99,7,6);
+
+INSERT INTO clothing Values(7,"Skirt",15.99,4,7);
+
+INSERT INTO clothing Values(8,"Rings",9.99,19,8);
+
+INSERT INTO clothing Values(9,"Shirt",5.99,27,9);
+
+INSERT INTO clothing Values(10,"Dress",29.99 ,18,10);
+
+INSERT INTO clothing Values(11,"Suit",99.99,19,11);
+
+INSERT INTO clothing Values(12,"Shoes",149.99,72,12);
+
+INSERT INTO clothing Values(13,"Bracelet",12.99,2,8);
+
+INSERT INTO clothing Values(14,"Hat",9.99,81,8
+);
+INSERT INTO clothing Values(15,"Watches",12.99,71,8);
+SELECT * FROM clothing
+Order by price;
+
+SELECT SUM(price) as total_price From clothing;
