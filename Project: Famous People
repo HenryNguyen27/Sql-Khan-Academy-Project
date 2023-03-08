@@ -1,0 +1,63 @@
+/* Create table about the people and what they do here */
+CREATE TABLE famous_people (
+ id INTEGER PRIMARY KEY,
+ name TEXT,
+ age INTEGER);
+ 
+ INSERT INTO famous_people (name, age) VALUES ("Jerry Le","21");
+ INSERT INTO famous_people (name, age) VALUES ("Jeffrey Vasquez","21");
+ INSERT INTO famous_people (name,age) VALUES
+ ("Kyle Huynh","22");
+ INSERT INTO famous_people (name,age) VALUES
+ ("Lucy Tran","19");
+ 
+ CREATE TABLE careers (
+ id INTEGER,
+ person_id INTEGER,
+ name TEXT);
+ 
+ INSERT INTO careers (person_id, name) Values
+ (1,"content_creator");
+ INSERT INTO careers (person_id, name) Values
+ (1,"sale_rep");
+ INSERT INTO careers (person_id, name) Values
+ (2,"sale_rep");
+ INSERT INTO careers (person_id, name) Values
+ (2,"artist");
+ INSERT INTO careers (person_id, name) Values
+ (3,"sale_rep");
+ INSERT INTO careers (person_id, name) Values
+ (3,"computer_science");
+ INSERT INTO careers (person_id, name) Values
+ (4,"sale_rep");
+ INSERT INTO careers (person_id, name) Values
+ (4,"server");
+ 
+ CREATE TABLE relation (
+ id INTEGER,
+ person1_id INTEGER,
+ person2_id INTEGER);
+ 
+ INSERT INTO relation (person1_id,person2_id)
+ Values (2,4);
+ INSERT INTO relation (person1_id,person2_id)
+ values (1,3);
+ 
+ Select famous_people.name, careers.name
+ From famous_people
+ JOIN careers
+ ON person_id = famous_people.id;
+ 
+ Select a.name,b.name FROM relation
+ JOIN famous_people a
+ ON a.id = relation.person1_id
+ JOIN famous_people b
+ ON b.id = relation.person2_id
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
