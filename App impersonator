@@ -1,0 +1,24 @@
+/* What does the app's SQL look like? */
+
+CREATE TABLE movies(
+id INTEGER PRIMARY KEY,
+name TEXT,
+movie_type TEXT,
+minutes INTEGER);
+
+INSERT INTO movies (name, movie_type, minutes) VALUES ("Titanic","Romance",130);
+INSERT INTO movies (name, movie_type, minutes) VALUES ("Lala land","Romance",260);
+INSERT INTO movies (name, movie_type, minutes) VALUES ("End Game","Sci-fi",260);
+INSERT INTO movies (name, movie_type, minutes) VALUES ("Demon Slayer","Anime",35);
+
+UPDATE movies set movie_type = "Action"
+Where id = 3;
+
+Select * From movies;
+
+DELETE From movies
+Where id = 4;
+
+Select * From movies;
+
+
